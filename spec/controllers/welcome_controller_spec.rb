@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe WelcomeController, type: :controller do
+  
+  let(:my_user) {User.create!(email: "nich@bloc.io", password: "helloworld")}
+
+  before do
+    my_user.confirm
+    sign_in my_user
+  end
 
   describe "GET #index" do
     it "returns http success" do
