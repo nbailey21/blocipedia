@@ -23,6 +23,8 @@ gem 'figaro'
 
 gem 'pundit'
 
+gem 'faker'
+
 gem 'devise'
 
 group :production do
