@@ -1,0 +1,10 @@
+<h1>Users</h1>
+<% @users.each do |user| %>
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">
+                <%= link_to user.email, user %>
+            </h4>
+        </div>
+    </div>
+<% end %>

@@ -25,6 +25,8 @@ gem 'pundit'
 
 gem 'faker'
 
+gem 'stripe'
+
 gem 'devise'
 
 group :production do

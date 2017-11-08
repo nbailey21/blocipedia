@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrationsController
+class Devise::RegistrationsController < DeviseController
   def new
     params.require(:sign_up).permit(:username, :email, :password, :password_confirmation, :user_id)
     super
@@ -8,4 +8,5 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:account_update).permit(:username, :email, :password, :password_confirmation, :user_id)
     super
   end
+  
 end
