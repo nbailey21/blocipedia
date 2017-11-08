@@ -11,6 +11,12 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
     @user.role = 'standard'
     
+    @user.wikis.each do |wiki|
+      if wiki.private == true
+        wiki.update_attributes private: false
+      end
+    end
+    
     if @user.save
       redirect_to root_path
     else

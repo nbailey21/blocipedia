@@ -18,6 +18,8 @@ class WikisController < ApplicationController
     authorize @wiki
     @wiki.title = params[:wiki][:title]
     @wiki.body = params[:wiki][:body]
+    @wiki.private = params[:wiki][:private]
+    @wiki.user_id = current_user.id
     
     if @wiki.save
       flash[:notice] = "Wiki was saved."
@@ -38,6 +40,7 @@ class WikisController < ApplicationController
   	authorize @wiki
   	@wiki.title = params[:wiki][:title]
   	@wiki.body = params[:wiki][:body]
+  	@wiki.private = params[:wiki][:private]
 	
   	if @wiki.save
   		flash[:notice] = "Wiki was updated."
