@@ -25,6 +25,8 @@ gem 'pundit'
 
 gem 'faker'
 
+gem 'redcarpet'
+
 gem 'stripe'
 
 gem 'devise'
